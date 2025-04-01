@@ -1,4 +1,20 @@
 body{
     background-color: rgb(20, 20, 20);
+    font-size: medium;
     color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+p{
+    align-content: left;
+    text-align: left;
+}
+img{
+    width: 20%;
+    height: 20%;
+}
+.bod{
+    background-color: rgb(20, 20, 20);
+    font-size: medium;
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
 }
