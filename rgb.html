@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RGB Color Mixer</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #colorBox {
+      width: 300px;
+      height: 100px;
+      margin: 20px auto;
+      background-color: rgb(255, 0, 0);
+      color: white;
+      font-weight: bold;
+      line-height: 100px;
+      border: 1px solid black;
+    }
+
+    .slider-box {
+      margin: 10px;
+    }
+
+    input[type="range"] {
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>RGB Color Mixer</h2>
+  <p>Move the sliders to mix RGB color</p>
+
+  <div id="colorBox">rgb(255, 0, 0)</div>
+
+  <div class="slider-box">
+    <label>Red: </label>
+    <input type="range" id="red" min="0" max="255" value="255" oninput="changeColor()">
+    <span id="redValue">255</span>
+  </div>
+
+  <div class="slider-box">
+    <label>Green: </label>
+    <input type="range" id="green" min="0" max="255" value="0" oninput="changeColor()">
+    <span id="greenValue">0</span>
+  </div>
+
+  <div class="slider-box">
+    <label>Blue: </label>
+    <input type="range" id="blue" min="0" max="255" value="0" oninput="changeColor()">
+    <span id="blueValue">0</span>
+  </div>
+
+  <script>
+    function changeColor() {
+      var r = document.getElementById("red").value;
+      var g = document.getElementById("green").value;
+      var b = document.getElementById("blue").value;
+
+      var color = "rgb(" + r + ", " + g + ", " + b + ")";
+      document.getElementById("colorBox").style.backgroundColor = color;
+      document.getElementById("colorBox").innerText = color;
+
+      document.getElementById("redValue").innerText = r;
+      document.getElementById("greenValue").innerText = g;
+      document.getElementById("blueValue").innerText = b;
+    }
+
+    // Call once to set initial values
+    changeColor();
+  </script>
+
+</body>
+</html>
