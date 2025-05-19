@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+</head>
+<body>
+  <style>
+    body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 30px;
+  }
+  
+  
+  input {
+    width: 215px;
+    height: 40px;
+    font-size: 18px;
+    text-align: right;
+    margin-bottom: 10px;
+    border-style: groove;
+  }
+  
+  button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin: 5px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-style: groove;
+  }
+  
+  button:hover {
+    background-color: darkgreen;
+  }
+  
+  .clear {
+    background-color: lightcoral;
+  }
+  
+  </style>
+
+
+  <input type="text" id="display" readonly>
+
+  <button onclick="document.getElementById('display').value = ''" class="clear">C</button><br><br>
+
+  <button onclick="document.getElementById('display').value += '1'">1</button>
+  <button onclick="document.getElementById('display').value += '2'">2</button>
+  <button onclick="document.getElementById('display').value += '3'">3</button>
+  <button onclick="document.getElementById('display').value += '/'">/</button><br><br>
+
+  <button onclick="document.getElementById('display').value += '4'">4</button>
+  <button onclick="document.getElementById('display').value += '5'">5</button>
+  <button onclick="document.getElementById('display').value += '6'">6</button>
+  <button onclick="document.getElementById('display').value += '*'">*</button><br><br>
+
+  <button onclick="document.getElementById('display').value += '7'">7</button>
+  <button onclick="document.getElementById('display').value += '8'">8</button>
+  <button onclick="document.getElementById('display').value += '9'">9</button>
+  <button onclick="document.getElementById('display').value += '-'">-</button><br><br>
+
+  <button onclick="document.getElementById('display').value += '.'">.</button>
+  <button onclick="document.getElementById('display').value += '0'">0</button>
+  <button onclick="document.getElementById('display').value = eval(document.getElementById('display').value)">=</button>
+  <button onclick="document.getElementById('display').value += '+'">+</button>
+</body>
+</html>
